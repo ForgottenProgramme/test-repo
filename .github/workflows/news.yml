@@ -70,3 +70,5 @@ jobs:
 #           user_email: 'example@email.com'
 #           user_name: 'dmnemec'
 #          commit_message: 'A custom message for the commit'
+
+      - run: echo This is for test
