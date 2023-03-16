@@ -59,9 +59,14 @@ jobs:
             ### Other
 
             * <news item>
-  
-      - name: Create news file
-        uses: actions/upload-artifact@v2
+          
+      - uses: dmnemec/copy_file_to_another_repo_action@main
+#         env:
+#           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          name: news
-          path: news.txt
+          source_file: "${{ steps.pr_number }}-${{ steps.pr_branch_name }}"
+          destination_repo: 'ForgottenProgramme/test-repo'
+          destination_folder: 'news'
+#           user_email: 'example@email.com'
+#           user_name: 'dmnemec'
+#          commit_message: 'A custom message for the commit'
