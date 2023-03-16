@@ -59,6 +59,10 @@ jobs:
             ### Other
 
             * <news item>
+            
+      - name: Print debug statement
+        shell: bash
+        run: echo "This is a test"
    
   saveFile:
     name: Save file
