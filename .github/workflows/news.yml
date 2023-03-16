@@ -59,3 +59,9 @@ jobs:
             ### Other
 
             * <news item>
+  
+      - name: Create news file
+        uses: actions/upload-artifact@v2
+        with:
+          name: news
+          path: news.txt
