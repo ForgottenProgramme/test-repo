@@ -59,7 +59,11 @@ jobs:
             ### Other
 
             * <news item>
-          
+   
+  saveFile:
+    name: Save file
+    runs-on: ubuntu-latest
+    steps:
       - uses: dmnemec/copy_file_to_another_repo_action@main
 #         env:
 #           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
@@ -71,4 +75,6 @@ jobs:
 #           user_name: 'dmnemec'
 #          commit_message: 'A custom message for the commit'
 
-      - run: echo This is for test
+      - name: Print debug statement
+        shell: bash
+        run: echo "This is a test"
